@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <Button
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="#a6a6a6"
+        android:text="Admin" />
+
+    <ImageButton
+        android:id="@+id/out"
+        android:layout_width="168dp"
+        android:layout_height="168dp"
+        android:layout_alignEnd="@+id/in"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/in"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="26dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/sign_out_icon"
+        android:cropToPadding="false"
+        android:onClick="signOut"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:id="@+id/in"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="26dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:onClick="signIn"
+        android:scaleType="fitXY"
+        android:background="@drawable/sign_in_icon"
+        android:layout_below="@+id/admin"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/in_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:fontFamily="casual"
+        android:text="Hello"
+        android:textAlignment="center"
+        android:textColor="?android:attr/editTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/out_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="casual"
+        android:text="Goodbye"
+        android:textAlignment="center"
+        android:textColor="?android:attr/editTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+</RelativeLayout>
