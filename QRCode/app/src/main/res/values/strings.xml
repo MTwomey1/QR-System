@@ -21,4 +21,6 @@
     <string name="LocationText">Enter centre location</string>
     <string name="register_bt_text">Register</string>
     <string name="goodbye_text">Goodbye</string>
+    <string name="home_bt_text">Home</string>
+    <string name="view_users_text">View Logged-in Users</string>
 </resources>

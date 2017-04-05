@@ -199,4 +199,12 @@ public class Server_Requests {
 
     }
 
+    public void fetch_all_users(User user, Get_String_Callback string_callback){
+
+        Map<String, String> data_to_send = new HashMap<>();
+        data_to_send.put("username", user.username);
+        new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
+
+    }
+
 }

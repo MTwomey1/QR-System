@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ReaderActivity"
-            android:configChanges="orientation|keyboardHidden">
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
 
@@ -23,13 +24,16 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden" />
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GeneratorActivity"
-            android:configChanges="orientation|keyboardHidden" />
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Start"
-            android:configChanges="orientation|keyboardHidden">
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,15 +42,33 @@
         </activity>
         <activity
             android:name=".StaffStart"
-            android:configChanges="orientation|keyboardHidden" />
-        <activity android:name=".Welcome" />
-        <activity android:name=".StaffSignin" />
-        <activity android:name=".Staffoptions2" />
-        <activity android:name=".StaffSignout" />
-        <activity android:name=".Addperson" />
-        <activity android:name=".Removemember" />
-        <activity android:name=".Register" />
-        <activity android:name=".Goodbye"></activity>
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StaffSignin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Staffoptions2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StaffSignout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Addperson"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Removemember"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Goodbye"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ViewUsers"></activity>
     </application>
 
 </manifest>

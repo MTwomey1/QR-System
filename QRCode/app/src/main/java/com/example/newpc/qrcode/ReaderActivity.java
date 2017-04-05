@@ -25,7 +25,7 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
     TextView returnView;
     String userid = null;
     User_Local_Data user_local_data;
-    Button retry_bt;
+    Button retry_bt, home_bt;
     Globals g = Globals.getInstance();
 
     @Override
@@ -45,8 +45,10 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
         user_local_data = new User_Local_Data(this);
         //returnView = (TextView) findViewById(R.id.tv_return);
         retry_bt = (Button) findViewById(R.id.retry_bt_id);
+        home_bt = (Button) findViewById(R.id.home_bt_id);
 
         retry_bt.setOnClickListener(this);
+        home_bt.setOnClickListener(this);
     }
 
     @Override
@@ -199,6 +201,18 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        this.recreate();
+        switch (v.getId()){
+
+            case R.id.retry_bt_id:
+                this.recreate();
+                break;
+
+            case R.id.home_bt_id:
+                Intent intent = new Intent(this, Start.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
+
     }
 }
