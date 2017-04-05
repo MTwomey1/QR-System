@@ -4,15 +4,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by Keith on 07/03/2017.
  */
 
-public class StaffStart extends Activity {
+public class StaffStart extends Activity implements View.OnClickListener {
+
+    Button register_btn;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.staffstart);
+
+        register_btn = (Button) findViewById(R.id.register_bt_ID);
+
+        register_btn.setOnClickListener(this);
     }
     public void signIn(View v) {
         if (v.getId() == R.id.in)
@@ -29,6 +37,18 @@ public class StaffStart extends Activity {
             //go to the register class
             //Intent intent = new Intent(.this, MainActivity.class);
             //startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.register_bt_ID:
+
+                Intent intent = new Intent(this, Register.class);
+                startActivity(intent);
+
+                break;
         }
     }
 }

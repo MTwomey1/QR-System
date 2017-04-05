@@ -10,31 +10,20 @@
     tools:context="com.example.newpc.qrcode.ReaderActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="QRCode Scanner"
-        android:textSize="25dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:text="Error"
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/tv_data"
-        android:hint="ho"
+    <Button
+        android:id="@+id/retry_bt_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/tv_return"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tv_data"
-        android:layout_marginTop="104dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:text="@string/Scan_error_bt" />
 
 </RelativeLayout>

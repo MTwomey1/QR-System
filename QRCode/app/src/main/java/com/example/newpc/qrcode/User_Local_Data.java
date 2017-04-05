@@ -22,8 +22,21 @@ public class User_Local_Data {
 
     public void StoreUserData(User user) {
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
+        spEditor.putString("userid", user.userid);
         spEditor.putString("firstname", user.firstname);
         spEditor.putString("surname", user.surname);
+
+        spEditor.commit();
+    }
+
+    public void StoreStaff(User user) {
+        SharedPreferences.Editor spEditor = userLocalDatabase.edit();
+        spEditor.putString("username", user.username);
+        spEditor.putString("password", user.password);
+        spEditor.putString("firstname", user.firstname);
+        spEditor.putString("surname", user.surname);
+        spEditor.putString("location", user.location);
+        spEditor.putString("status", user.status);
 
         spEditor.commit();
     }
@@ -41,10 +54,10 @@ public class User_Local_Data {
 
     public User get_logged_in_user() {
         String userid = userLocalDatabase.getString("userid", "");
-        String username = userLocalDatabase.getString("username", "");
-        String password = userLocalDatabase.getString("password", "");
+        String firstname = userLocalDatabase.getString("firstname", "");
+        String surname = userLocalDatabase.getString("surname", "");
 
-        User stored_user = new User(userid,username,password);
+        User stored_user = new User(userid,firstname,surname);
 
         return stored_user;
     }

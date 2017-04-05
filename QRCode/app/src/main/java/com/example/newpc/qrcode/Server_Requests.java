@@ -135,16 +135,16 @@ public class Server_Requests {
     }
 
     // for registering user
-    /*public void store_user_data_in_background(User user, Get_String_Callback string_callback) {
+    public void store_user_data_in_background(User user, Get_String_Callback string_callback) {
 
         // store data to send in HashMap
         Map<String, String> data_to_send = new HashMap<>();
         data_to_send.put("username", user.username);
         data_to_send.put("password", user.password);
-        data_to_send.put("email", user.email);
         data_to_send.put("firstname", user.firstname);
         data_to_send.put("surname", user.surname);
-        data_to_send.put("age", user.age);
+        data_to_send.put("location", user.location);
+        data_to_send.put("status", user.status);
 
         // show progress
         progressDialog.show();
@@ -152,7 +152,7 @@ public class Server_Requests {
         // send data to sever - the sever will echo back the results
         new connection(data_to_send, "Register.php", string_callback).execute();
     }
-*/
+
     // for logging in
     public void fetch_user_data_in_background(User user, Get_String_Callback string_callback) {
 
@@ -165,6 +165,37 @@ public class Server_Requests {
 
         // send data to sever - the sever will echo back the results
         new connection(data_to_send, "fetch_user_data.php", string_callback).execute();
+
+    }
+
+    // for logging in
+    public void logout_user(User user, Get_String_Callback string_callback) {
+
+        // place data to send in a HashMap
+        Map<String, String> data_to_send = new HashMap<>();
+        data_to_send.put("userid", user.userid);
+
+        // show progress
+        progressDialog.show();
+
+        // send data to sever - the sever will echo back the results
+        new connection(data_to_send, "logout_user.php", string_callback).execute();
+
+    }
+
+
+    public void login_staff(User user, Get_String_Callback string_callback) {
+
+        // place data to send in a HashMap
+        Map<String, String> data_to_send = new HashMap<>();
+        data_to_send.put("username", user.username);
+        data_to_send.put("password", user.password);
+
+        // show progress
+         progressDialog.show();
+
+        // send data to sever - the sever will echo back the results
+        new connection(data_to_send, "Login.php", string_callback).execute();
 
     }
 

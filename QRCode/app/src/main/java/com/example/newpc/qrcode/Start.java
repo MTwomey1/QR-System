@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class Start extends AppCompatActivity {
 
+    Globals g = Globals.getInstance();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
@@ -29,6 +31,7 @@ public class Start extends AppCompatActivity {
             //go to login class
             Intent intent = new Intent(Start.this, ReaderActivity.class);
             startActivity(intent);
+            g.setTest(1);
         }
     }
     //onclick signout button
@@ -36,8 +39,9 @@ public class Start extends AppCompatActivity {
         if (v.getId() == R.id.out)
         {
             //go to the register class
-            Intent intent = new Intent(Start.this, MainActivity.class);
+            Intent intent = new Intent(Start.this, ReaderActivity.class);
             startActivity(intent);
+            g.setTest(0);
         }
     }
 }

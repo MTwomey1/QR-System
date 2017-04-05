@@ -6,12 +6,24 @@ package com.example.newpc.qrcode;
 
 public class User {
 
-    String userid, firstname, surname, location, status;
+    String userid, firstname, surname, location, status, username, password;
 
     // for logging in
     public User (String userid) {
 
         this.userid = userid;
+        this.firstname = "";
+        this.surname = "";
+        this.location = "";
+        this.status = "";
+
+    }
+
+    // for logging in
+    public User (String username, String password) {
+
+        this.username = username;
+        this.password = password;
         this.firstname = "";
         this.surname = "";
         this.location = "";
@@ -30,9 +42,10 @@ public class User {
 
     }
 
-    public User (String userid, String firstname, String surname, String location, String status) {
+    public User (String username, String password, String firstname, String surname, String location, String status) {
 
-        this.userid = userid;
+        this.username = username;
+        this.password = password;
         this.firstname = firstname;
         this.surname = surname;
         this.location = location;

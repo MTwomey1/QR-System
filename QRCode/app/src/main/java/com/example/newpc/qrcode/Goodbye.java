@@ -8,7 +8,7 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Welcome extends Activity {
+public class Goodbye extends Activity {
 
     User_Local_Data user_local_data;
     TextView et_firstname;
@@ -17,7 +17,7 @@ public class Welcome extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_goodbye);
 
         et_firstname = (TextView) findViewById(R.id.et_firstname);
         tv_timer = (TextView) findViewById(R.id.tv_timer_id);
@@ -35,6 +35,7 @@ public class Welcome extends Activity {
                         .getLaunchIntentForPackage( getBaseContext().getPackageName() );
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
+                user_local_data.clear_user_data();
             }
         }.start();
 
