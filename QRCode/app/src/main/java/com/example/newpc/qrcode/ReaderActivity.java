@@ -22,7 +22,6 @@ import org.json.JSONObject;
 
 public class ReaderActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView returnView;
     String userid = null;
     User_Local_Data user_local_data;
     Button retry_bt, home_bt;
@@ -38,12 +37,11 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
         integrator.setCameraId(0);
         integrator.setPrompt(" ");
-        integrator.setBeepEnabled(true);
+        integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(false);
         integrator.initiateScan();
 
         user_local_data = new User_Local_Data(this);
-        //returnView = (TextView) findViewById(R.id.tv_return);
         retry_bt = (Button) findViewById(R.id.retry_bt_id);
         home_bt = (Button) findViewById(R.id.home_bt_id);
 
@@ -60,12 +58,11 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }
             else {
-                Toast.makeText(this, result.getContents(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, result.getContents(),Toast.LENGTH_LONG).show();
                 super.onActivityResult(requestCode, resultCode, data);
                 userid = data.getStringExtra("SCAN_RESULT");
                 String format = data.getStringExtra("SCAN_RESULT_FORMAT");
-                //TextView dataView = (TextView) findViewById(R.id.tv_data);
-                //dataView.setText(userid);
+
                 User user = new User(userid);
                 if(g.getTest()==1){
                     authenticate(user);
@@ -79,8 +76,7 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
             super.onActivityResult(requestCode, resultCode, data);
             userid = data.getStringExtra("SCAN_RESULT");
             String format = data.getStringExtra("SCAN_RESULT_FORMAT");
-            //TextView dataView = (TextView) findViewById(R.id.tv_data);
-           // dataView.setText("poop");
+
         }
     }
 
@@ -208,11 +204,16 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.home_bt_id:
-                Intent intent = new Intent(this, Start.class);
-                startActivity(intent);
+                // App Restart
+                Intent i = getBaseContext().getPackageManager()
+                        .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
                 finish();
                 break;
         }
 
     }
+
+
 }

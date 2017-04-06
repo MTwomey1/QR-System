@@ -161,7 +161,7 @@ public class Server_Requests {
         data_to_send.put("userid", user.userid);
 
         // show progress
-        progressDialog.show();
+        //progressDialog.show();
 
         // send data to sever - the sever will echo back the results
         new connection(data_to_send, "fetch_user_data.php", string_callback).execute();
@@ -206,5 +206,6 @@ public class Server_Requests {
         new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
 
     }
+
 
 }
