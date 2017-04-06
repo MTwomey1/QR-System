@@ -45,6 +45,11 @@ public class Server_Requests {
             this.string_callback = string_callback;
         }
 
+        public connection(String PHP_FILE_NAME, Get_String_Callback string_callback){
+            this.PHP_FILE_NAME = PHP_FILE_NAME.trim();
+            this.string_callback = string_callback;
+        }
+
         @Override
         protected String doInBackground(Void... params) {
             // Encoded String - we will have to encode string by our custom method above called getEncodedData()
@@ -203,6 +208,8 @@ public class Server_Requests {
 
         Map<String, String> data_to_send = new HashMap<>();
         data_to_send.put("username", user.username);
+        data_to_send.put("username", user.firstname);
+
         new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
 
     }
