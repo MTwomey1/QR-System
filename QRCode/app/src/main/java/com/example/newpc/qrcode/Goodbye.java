@@ -27,7 +27,7 @@ public class Goodbye extends Activity {
 
         user_local_data = new User_Local_Data(this);
 
-        new CountDownTimer(5000, 1000) {
+        new CountDownTimer(4000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 tv_timer.setText(String.valueOf(millisUntilFinished / 1000));
@@ -88,7 +88,9 @@ public class Goodbye extends Activity {
     {
         super.onDestroy();
 
-        ts.shutdown();
+        if(ts != null){
+            ts.shutdown();
+        }
     }
 
 
