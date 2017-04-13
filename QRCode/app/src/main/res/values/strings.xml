@@ -23,4 +23,5 @@
     <string name="goodbye_text">Goodbye</string>
     <string name="home_bt_text">Home</string>
     <string name="view_users_text">View Logged-in Users</string>
+    <string name="logged_user_text">Currently Logged-in Users</string>
 </resources>

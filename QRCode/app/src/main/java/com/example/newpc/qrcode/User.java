@@ -52,4 +52,16 @@ public class User {
         this.status = status;
 
     }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
 }
