@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -27,9 +26,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
         et_username = (EditText) findViewById(R.id.usernameID);
         et_password = (EditText) findViewById(R.id.passwordID);
         et_confirm_password = (EditText) findViewById(R.id.confirmPasswordID);
-        et_firstname = (EditText) findViewById(R.id.fNameID);
-        et_surname = (EditText) findViewById(R.id.sNameID);
-        et_location = (EditText) findViewById(R.id.locationID);
+        et_firstname = (EditText) findViewById(R.id.user_fname_id);
+        et_surname = (EditText) findViewById(R.id.user_sname_id);
+        et_location = (EditText) findViewById(R.id.user_loc_id);
 
         submit_button = (Button) findViewById(R.id.submitButtonID);
 

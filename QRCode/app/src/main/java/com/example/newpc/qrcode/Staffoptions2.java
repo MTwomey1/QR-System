@@ -3,6 +3,7 @@ package com.example.newpc.qrcode;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -10,7 +11,7 @@ import android.widget.Button;
  * Created by Keith on 07/03/2017.
  */
 
-public class Staffoptions2 extends Activity implements View.OnClickListener {
+public class Staffoptions2 extends AppCompatActivity implements View.OnClickListener {
 
     Button view_in_bt, view_out_bt, view_all_bt;
     Button register_staff_bt, register_user_bt;
@@ -66,6 +67,13 @@ public class Staffoptions2 extends Activity implements View.OnClickListener {
                 g2.setTest(3);
                 Intent intent4 = new Intent(this, ViewUsers.class);
                 startActivity(intent4);
+
+                break;
+
+            case R.id.register_user_bt_id:
+
+                Intent intent5 = new Intent(this, RegisterUser.class);
+                startActivity(intent5);
 
                 break;
         }

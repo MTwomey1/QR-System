@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,6 @@ public class StaffSignin extends Activity implements View.OnClickListener {
     EditText et_username, et_password;
     Button login_button;
     User_Local_Data user_local_data;
-    TextView return_view;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,7 +30,6 @@ public class StaffSignin extends Activity implements View.OnClickListener {
         et_username = (EditText) findViewById(R.id.staff_username_id);
         et_password = (EditText) findViewById(R.id.staff_pass_id);
         login_button = (Button) findViewById(R.id.login_bt_id);
-        return_view = (TextView) findViewById(R.id.return_tv);
 
         login_button.setOnClickListener(this);
         user_local_data = new User_Local_Data(this);
@@ -73,7 +72,6 @@ public class StaffSignin extends Activity implements View.OnClickListener {
 
                     try {
                         Log.d("myTag","String fill");
-                        return_view.setText(returned_string);
 
                         // Create a JSONObject from the returned String
                         JSONObject jObject = new JSONObject(returned_string);

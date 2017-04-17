@@ -3,9 +3,14 @@
     <string name="Welcome_Text">Welcome</string>
     <string name="Scan_error_bt">Retry Scan</string>
     <string name="registerInfoText">Enter your details to register</string>
+    <string name="registerInfoText2">Enter User details to register</string>
     <string name="fNameText">Enter your first name</string>
+    <string name="fNameText2">Enter User first name</string>
     <string name="fNameLabel">First Name:</string>
     <string name="sNameText">Enter your surname</string>
+    <string name="sNameText2">Enter User surname</string>
+    <string name="userid_text">Enter User-ID:</string>
+    <string name="userid_label">User-ID:</string>
     <string name="sNameLabel">Surname:</string>
     <string name="ageText">Enter you age</string>
     <string name="usernameText">Create your username</string>
@@ -27,4 +32,5 @@
     <string name="view_out_users">Users Out</string>
     <string name="view_all_users">View all Users</string>
     <string name="logged_user_text">Currently Logged-in Users</string>
+    <string name="staff_help_text">Staff Options</string>
 </resources>

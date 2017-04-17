@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/myRed"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:text="@string/view_out_users"
         android:layout_below="@+id/view_users_bt_id"
         android:layout_centerHorizontal="true" />
@@ -34,13 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/user_out_bt_id"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:text="@string/view_all_users" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="70dp"
         android:id="@+id/register_b_id"
         android:text="@string/register_bt_text"
         android:layout_below="@+id/all_user_bt_id"
@@ -50,13 +50,23 @@
         android:id="@+id/register_user_bt_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="@string/register_user_text"
         android:layout_below="@+id/register_b_id"
         android:layout_alignRight="@+id/register_b_id"
         android:layout_alignEnd="@+id/register_b_id"
         android:layout_alignLeft="@+id/register_b_id"
         android:layout_alignStart="@+id/register_b_id" />
+
+    <TextView
+        android:id="@+id/staff_help_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/staff_help_text"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"/>
 
 
 </RelativeLayout>

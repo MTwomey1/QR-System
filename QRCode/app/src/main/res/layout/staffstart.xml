@@ -3,20 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7CD8D5">
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text= "Sign out"
-        android:id="@+id/out"
-        android:onClick="signOut"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="#F53240"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="fill_parent"
+        android:layout_margin="40dp"
         android:text="Sign in"
         android:id="@+id/in"
         android:onClick="signIn"
@@ -24,8 +14,16 @@
         android:background="#00cc00"
         android:layout_height="wrap_content"
         android:layout_below="@+id/admin"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginTop="36dp" />
+
+    <Button
+        android:id="@+id/home_b_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="signOut"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="40dp"
+        android:text="@string/home_bt_text" />
 
 </RelativeLayout>

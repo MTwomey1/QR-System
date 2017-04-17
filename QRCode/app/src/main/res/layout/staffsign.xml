@@ -71,12 +71,4 @@
             android:textSize="25dip" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/return_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/staff_pass_id"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
-        android:text="TextView" />
 </RelativeLayout>

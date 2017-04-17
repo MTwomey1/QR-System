@@ -140,7 +140,7 @@ public class Server_Requests {
         return sb.toString();
     }
 
-    // for registering user
+    // for registering Staff
     public void store_user_data_in_background(User user, Get_String_Callback string_callback) {
 
         // store data to send in HashMap
@@ -157,6 +157,24 @@ public class Server_Requests {
 
         // send data to sever - the sever will echo back the results
         new connection(data_to_send, "Register.php", string_callback).execute();
+    }
+
+    // for registering user
+    public void register_user(User user, Get_String_Callback string_callback) {
+
+        // store data to send in HashMap
+        Map<String, String> data_to_send = new HashMap<>();
+        data_to_send.put("userid", user.userid);
+        data_to_send.put("firstname", user.firstname);
+        data_to_send.put("surname", user.surname);
+        data_to_send.put("location", user.location);
+        data_to_send.put("status", user.status);
+
+        // show progress
+        progressDialog.show();
+
+        // send data to sever - the sever will echo back the results
+        new connection(data_to_send, "RegisterUser.php", string_callback).execute();
     }
 
     // for logging in

@@ -28,11 +28,12 @@ public class StaffStart extends Activity implements View.OnClickListener {
     }
     //onclick signout button
     public void signOut(View v) {
-        if (v.getId() == R.id.out)
+        if (v.getId() == R.id.home_b_id)
         {
-            //go to the register class
-            //Intent intent = new Intent(.this, MainActivity.class);
-            //startActivity(intent);
+            Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+            finish();
         }
     }
 

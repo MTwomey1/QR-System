@@ -68,7 +68,8 @@
         <activity
             android:name=".Goodbye"
             android:screenOrientation="portrait" />
-        <activity android:name=".ViewUsers"></activity>
+        <activity android:name=".ViewUsers" />
+        <activity android:name=".RegisterUser"></activity>
     </application>
 
 </manifest>

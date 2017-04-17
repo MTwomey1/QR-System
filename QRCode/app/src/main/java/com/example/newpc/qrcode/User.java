@@ -19,6 +19,16 @@ public class User {
 
     }
 
+    public User (String userid, String firstname, String surname, String location, String status) {
+
+        this.userid = userid;
+        this.firstname = firstname;
+        this.surname = surname;
+        this.location = location;
+        this.status = status;
+
+    }
+
     // for logging in
     public User (String username, String password) {
 
