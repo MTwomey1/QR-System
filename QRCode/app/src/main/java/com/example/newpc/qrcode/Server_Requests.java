@@ -22,6 +22,7 @@ import java.util.Map;
 
 public class Server_Requests {
     public static final String SERVER_ADDRESS = "http://www.signinregistrar.co.nf/";
+    Globals g2 = Globals.getInstance();
 
     // this is for showing loading box
     ProgressDialog progressDialog;
@@ -210,7 +211,15 @@ public class Server_Requests {
         data_to_send.put("username", user.username);
         data_to_send.put("username", user.firstname); //DON'T change!! Dummy-Fetch
 
-        new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
+        if(g2.getTest()==1) {
+            new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
+        }
+        if(g2.getTest()==2) {
+            new connection(data_to_send, "fetch_all_users2.php", string_callback).execute();
+        }
+        if(g2.getTest()==3) {
+            new connection(data_to_send, "fetch_all_users3.php", string_callback).execute();
+        }
 
     }
 

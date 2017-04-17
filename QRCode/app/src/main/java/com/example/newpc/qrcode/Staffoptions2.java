@@ -14,6 +14,7 @@ public class Staffoptions2 extends Activity implements View.OnClickListener {
 
     Button view_in_bt, view_out_bt, view_all_bt;
     Button register_staff_bt, register_user_bt;
+    Globals g2 = Globals.getInstance();
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -46,8 +47,27 @@ public class Staffoptions2 extends Activity implements View.OnClickListener {
 
             case R.id.view_users_bt_id:
 
+                g2.setTest(1);
                 Intent intent2 = new Intent(this, ViewUsers.class);
                 startActivity(intent2);
+
+                break;
+
+            case R.id.user_out_bt_id:
+
+                g2.setTest(2);
+                Intent intent3 = new Intent(this, ViewUsers.class);
+                startActivity(intent3);
+
+                break;
+
+            case R.id.all_user_bt_id:
+
+                g2.setTest(3);
+                Intent intent4 = new Intent(this, ViewUsers.class);
+                startActivity(intent4);
+
+                break;
         }
     }
 }

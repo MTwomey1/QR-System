@@ -18,19 +18,30 @@ public class ViewUsers extends AppCompatActivity {
     String userid;
     UserAdapter userAdapter;
     ListView listView;
+    TextView tv_current;
+    Globals g2 = Globals.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_users);
         User user = new User(userid, userid);
+
         displayUsers(user);
 
         listView = (ListView)findViewById(R.id.listview);
+        tv_current = (TextView) findViewById(R.id.tv_current_id);
 
         userAdapter = new UserAdapter(this,R.layout.row_layout);
 
         listView.setAdapter(userAdapter);
+
+        if(g2.getTest()==2) {
+            tv_current.setText("Currently Logged-Out Users");
+        }
+        if(g2.getTest()==3) {
+            tv_current.setText("All Users");
+        }
     }
 
     private void displayUsers(final User user){
