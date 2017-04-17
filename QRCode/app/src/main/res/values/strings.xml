@@ -19,9 +19,12 @@
     <string name="passwordLabel">Password:</string>
     <string name="locationLabel">Location:</string>
     <string name="LocationText">Enter centre location</string>
-    <string name="register_bt_text">Register</string>
+    <string name="register_bt_text">Register Staff</string>
+    <string name="register_user_text">Register User</string>
     <string name="goodbye_text">Goodbye</string>
     <string name="home_bt_text">Home</string>
-    <string name="view_users_text">View Logged-in Users</string>
+    <string name="view_users_text">Users In</string>
+    <string name="view_out_users">Users Out</string>
+    <string name="view_all_users">View all Users</string>
     <string name="logged_user_text">Currently Logged-in Users</string>
 </resources>

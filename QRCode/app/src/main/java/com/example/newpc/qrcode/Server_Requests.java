@@ -208,7 +208,7 @@ public class Server_Requests {
 
         Map<String, String> data_to_send = new HashMap<>();
         data_to_send.put("username", user.username);
-        data_to_send.put("username", user.firstname);
+        data_to_send.put("username", user.firstname); //DON'T change!! Dummy-Fetch
 
         new connection(data_to_send, "fetch_all_users.php", string_callback).execute();
 

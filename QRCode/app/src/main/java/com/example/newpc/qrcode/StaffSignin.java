@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by Keith on 07/03/2017.
- */
 
 public class StaffSignin extends Activity implements View.OnClickListener {
 
@@ -40,15 +38,25 @@ public class StaffSignin extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.login_bt_id:
 
-                String username = et_username.getText().toString();
-                String password = et_password.getText().toString();
+        // check if user has active internet connection
+        if (AppStatus.getInstance(this).isOnline()) {
 
-                User user = new User(username, password);
+            switch (v.getId()) {
 
-                authenticate(user);
+                case R.id.login_bt_id:
+
+                    String username = et_username.getText().toString();
+                    String password = et_password.getText().toString();
+
+                    User user = new User(username, password);
+
+                    authenticate(user);
+                    break;
+            }
+
+        } else {
+            Toast.makeText(getApplicationContext(),"You are offline", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -60,14 +68,12 @@ public class StaffSignin extends Activity implements View.OnClickListener {
             public void done(String returned_string) {
                 if (returned_string.equals("failed")) {
                     show_error_message("Incorrect username or password");
+                    Log.d("myTag","Fookd String");
                 } else {
 
                     try {
-                        Log.d("myTag", "Register Response: " + returned_string.toString());
-                        Log.d("myTag", "Register Response2: " + returned_string);
+                        Log.d("myTag","String fill");
                         return_view.setText(returned_string);
-                        // create a user;
-                        User user;
 
                         // Create a JSONObject from the returned String
                         JSONObject jObject = new JSONObject(returned_string);
@@ -79,11 +85,11 @@ public class StaffSignin extends Activity implements View.OnClickListener {
                         String location = jObject.getString("location");
                         String status = jObject.getString("status");
 
-                        user = new User(username,password,firstname,surname,location,status);
+                        User user = new User(username,password,firstname,surname,location,status);
 
                         log_user_in(user);
 
-                        finish();
+                        //finish();
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -102,6 +108,7 @@ public class StaffSignin extends Activity implements View.OnClickListener {
     }
 
     private void log_user_in(User returned_user) {
+        Log.d("myTag", "Log user");
         user_local_data.StoreStaff(returned_user);
         user_local_data.set_user_logged_in(true);
 

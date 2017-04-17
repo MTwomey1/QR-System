@@ -12,14 +12,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
 
 public class ViewUsers extends AppCompatActivity {
 
     String userid;
-    TextView tv_return;
-    JSONObject jsonObject;
-    JSONArray jsonArray;
     UserAdapter userAdapter;
     ListView listView;
 
@@ -59,32 +55,6 @@ public class ViewUsers extends AppCompatActivity {
                             User user = new User(userid, firstname, surname);
                             userAdapter.add(user);
                         }
-
-                        //jsonArray = jsonObject.getJSONArray("users");
-                        //JSONArray jsonArray = new JSONArray(returned_string);
-
-                        /*int count = 0;
-
-                        while(count<jsonArray.length()){
-                            JSONObject JO = jsonArray.getJSONObject(count);
-                            userid = JO.getString("userid0");
-                            firstname = JO.getString("firstname0");
-                            surname = JO.getString("lastname0");
-
-                            User user = new User(userid, firstname, surname);
-                            userAdapter.add(user);
-                            count++;
-                        }*/
-
-                       /* String userid = jObject.getString("userid0");
-                        String firstname = jObject.getString("FirstName0");
-                        String surname = jObject.getString("LastName0");
-
-                        user = new User(userid, firstname, surname);
-
-                        log_user_out(user); */
-
-
 
                     } catch (JSONException e) {
                         e.printStackTrace();
