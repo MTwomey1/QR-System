@@ -105,7 +105,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener,
             @Override
             public void done(String returned_string) {
 
-                if (returned_string.trim().equals("username")) {
+                if (returned_string.trim().equals("Username taken")) {
                     et_username.setError("Username Already in Use");
                 }
                  else {

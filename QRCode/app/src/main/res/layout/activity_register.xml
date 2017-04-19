@@ -82,20 +82,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/passwordID"
-        android:hint="@string/passwordText"
-        android:fontFamily="sans-serif"
-        android:textAlignment="center"
-        android:layout_below="@+id/usernameID"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="12dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/usernameID"
@@ -111,14 +97,29 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:id="@+id/passwordID"
+        android:hint="@string/passwordText"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:layout_below="@+id/usernameID"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
         android:id="@+id/confirmPasswordID"
         android:hint="@string/passwordConfirmText"
         android:fontFamily="sans-serif"
         android:textAlignment="center"
-        android:layout_above="@+id/user_fname_id"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/passwordID"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="19dp" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -129,9 +130,10 @@
         android:hint="@string/fNameText"
         android:selectAllOnFocus="true"
         android:textAlignment="center"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/passwordID"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="87dp" />
 
     <EditText
         android:layout_width="wrap_content"

@@ -9,13 +9,13 @@
     <string name="fNameLabel">First Name:</string>
     <string name="sNameText">Enter your surname</string>
     <string name="sNameText2">Enter User surname</string>
-    <string name="userid_text">Enter User-ID:</string>
+    <string name="userid_text">Enter User-ID</string>
     <string name="userid_label">User-ID:</string>
     <string name="sNameLabel">Surname:</string>
     <string name="ageText">Enter you age</string>
     <string name="usernameText">Create your username</string>
     <string name="usernameLabel">Username:</string>
-    <string name="passwordConfirmText">Re-enter your Password</string>
+    <string name="passwordConfirmText">Confirm your Password</string>
     <string name="passwordConfirmLabel">Confirm:</string>
     <string name="submitButtonText">Submit</string>
     <string name="emailLabel">Email:</string>
