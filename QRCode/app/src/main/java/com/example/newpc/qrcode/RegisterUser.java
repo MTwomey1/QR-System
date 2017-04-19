@@ -63,14 +63,11 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
                     if(isEmpty(location) == false){
                         et_user_location.setError("Enter Location");
-
-
-                        User user = new User(userid, firstname, surname, location, status);
-                        register_user(user);
                         return;
 
                     } else {
-                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        User user = new User(userid, firstname, surname, location, status);
+                        register_user(user);
                     }
 
                     break;
@@ -87,12 +84,14 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             @Override
             public void done(String returned_string) {
 
-                if (returned_string.trim().equals("userid")) {
+                if (returned_string.trim().equals("UserID taken")) {
                     et_user_userid.setError("Userid Already in Use");
+                    Toast.makeText(getApplicationContext(),"Userid Already in Use", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     startActivity(new Intent(RegisterUser.this, Staffoptions2.class));
                     finish();
+
                 }
             }
         });
