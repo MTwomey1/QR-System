@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QR Code</string>
+    <string name="app_name">QR System</string>
     <string name="Welcome_Text">Welcome</string>
     <string name="Scan_error_bt">Retry Scan</string>
     <string name="registerInfoText">Enter your details to register</string>
