@@ -69,7 +69,9 @@
             android:name=".Goodbye"
             android:screenOrientation="portrait" />
         <activity android:name=".ViewUsers" />
-        <activity android:name=".RegisterUser"></activity>
+        <activity android:name=".RegisterUser" />
+        <activity android:name=".RemoveStaff" />
+        <activity android:name=".RemoveUser"></activity>
     </application>
 
 </manifest>

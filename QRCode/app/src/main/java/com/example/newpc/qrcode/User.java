@@ -19,6 +19,7 @@ public class User {
 
     }
 
+
     public User (String userid, String firstname, String surname, String location, String status) {
 
         this.userid = userid;
@@ -41,6 +42,7 @@ public class User {
 
     }
 
+
     // for logging in
     public User (String userid, String firstname, String surname) {
 
@@ -62,6 +64,7 @@ public class User {
         this.status = status;
 
     }
+
 
     public String getFirstname() {
         return firstname;

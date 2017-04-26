@@ -15,6 +15,7 @@ public class Staffoptions2 extends AppCompatActivity implements View.OnClickList
 
     Button view_in_bt, view_out_bt, view_all_bt;
     Button register_staff_bt, register_user_bt;
+    Button remove_staff_b, remove_user_b;
     Globals g2 = Globals.getInstance();
 
     protected void onCreate(Bundle savedInstanceState)
@@ -27,12 +28,16 @@ public class Staffoptions2 extends AppCompatActivity implements View.OnClickList
         view_all_bt = (Button) findViewById(R.id.all_user_bt_id);
         register_staff_bt = (Button) findViewById(R.id.register_b_id);
         register_user_bt = (Button) findViewById(R.id.register_user_bt_id);
+        //remove_staff_b = (Button) findViewById(R.id.remove_staff_b_id) ;
+        remove_user_b = (Button) findViewById(R.id.remove_user_b_id);
 
         view_in_bt.setOnClickListener(this);
         view_out_bt.setOnClickListener(this);
         view_all_bt.setOnClickListener(this);
         register_staff_bt.setOnClickListener(this);
         register_user_bt.setOnClickListener(this);
+        //remove_staff_b.setOnClickListener(this);
+        remove_user_b.setOnClickListener(this);
     }
 
     @Override
@@ -74,6 +79,20 @@ public class Staffoptions2 extends AppCompatActivity implements View.OnClickList
 
                 Intent intent5 = new Intent(this, RegisterUser.class);
                 startActivity(intent5);
+
+                break;
+
+            /*case R.id.remove_staff_b_id:
+
+                Intent intent6 = new Intent(this, RemoveStaff.class);
+                startActivity(intent6);
+
+                break;*/
+
+            case R.id.remove_user_b_id:
+
+                Intent intent7 = new Intent(this, RemoveUser.class);
+                startActivity(intent7);
 
                 break;
         }

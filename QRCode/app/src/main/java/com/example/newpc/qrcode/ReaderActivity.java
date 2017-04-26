@@ -35,7 +35,7 @@ public class ReaderActivity extends AppCompatActivity implements View.OnClickLis
         final Activity activity = this;
         IntentIntegrator integrator = new IntentIntegrator(activity);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-        integrator.setCameraId(0);
+        integrator.setCameraId(1);
         integrator.setPrompt(" ");
         integrator.setBeepEnabled(false);
         integrator.setBarcodeImageEnabled(false);

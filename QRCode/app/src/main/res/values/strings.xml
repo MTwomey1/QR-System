@@ -33,4 +33,7 @@
     <string name="view_all_users">View all Users</string>
     <string name="logged_user_text">Currently Logged-in Users</string>
     <string name="staff_help_text">Staff Options</string>
+    <string name="remove_user_text">Remove User</string>
+    <string name="remove_staff_text">Remove Staff</string>
+    <string name="remove_text">Enter Details to Remove User</string>
 </resources>
