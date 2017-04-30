@@ -16,7 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class StaffSignin extends Activity implements View.OnClickListener {
+public class StaffSignin extends AppCompatActivity implements View.OnClickListener {
 
     EditText et_username, et_password;
     Button login_button;

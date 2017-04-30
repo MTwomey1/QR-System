@@ -9,27 +9,27 @@
         android:id="@+id/staff_username_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/staff_pass_id"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="44dp"
-        android:hint="Enter username"
-        android:maxLength="20" />
+        android:layout_marginTop="66dp"
+        android:hint="@string/username_enter_text"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:nextFocusDown="@+id/staff_pass_id"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter password"
+        android:hint="@string/passwordText"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/staff_pass_id"
         android:maxLength="15"
         android:layout_gravity="center"
-        android:layout_marginBottom="68dp"
-        android:layout_above="@+id/login_bt_id"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/staff_username_id" />
 
     <Button
         android:layout_width="wrap_content"
@@ -43,32 +43,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/title"
-        android:background="#02C8A7"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_centerHorizontal="true"
+        android:text="@string/staff_signin_text"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:text="Staff Sign-In"
-            android:textColor="@color/primary_dark_material_dark"
-            android:textSize="25dip" />
-    </LinearLayout>
 
 </RelativeLayout>
