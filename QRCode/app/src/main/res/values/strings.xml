@@ -36,4 +36,5 @@
     <string name="remove_user_text">Remove User</string>
     <string name="remove_staff_text">Remove Staff</string>
     <string name="remove_text">Enter Details to Remove User</string>
+    <string name="sign_out_text">Sign Out all Users</string>
 </resources>

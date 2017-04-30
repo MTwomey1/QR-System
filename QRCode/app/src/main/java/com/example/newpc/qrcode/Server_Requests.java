@@ -192,6 +192,22 @@ public class Server_Requests {
         new connection(data_to_send, "RemoveUser.php", string_callback).execute();
     }
 
+    // for Removing user
+    public void sign_all_out(User user, Get_String_Callback string_callback) {
+
+        // store data to send in HashMap
+        Map<String, String> data_to_send = new HashMap<>();
+        data_to_send.put("userid", user.userid);
+        data_to_send.put("surname", user.surname);
+        data_to_send.put("firstname",user.firstname);
+
+        // show progress
+        progressDialog.show();
+
+        // send data to sever - the sever will echo back the results
+        new connection(data_to_send, "SignAllOut.php", string_callback).execute();
+    }
+
     // for logging in
     public void fetch_user_data_in_background(User user, Get_String_Callback string_callback) {
 
